@@ -82,7 +82,7 @@ if __name__ == '__main__':
         ".json",
         ".pptx"            
         ]
-    #remover llave privada
+    #remover llave 
     secret = 'this is a key123'.encode("utf-8")
     
     for location in LOCATIONS:
